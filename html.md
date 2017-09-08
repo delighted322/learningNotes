@@ -196,3 +196,157 @@ href属性规定链接的目标<br />
 **创建图像映射**:创建带有可供点击区域的图像地图，其中的每个区域都是一个超级链接`usemap`(`<map>`定义图像地图,`<area>`定义图像地图中的可点击区域)
 
 **把图像转换为图像映射**`<img src="....jpg" ismap />`
+
+
+***
+### 10.HTML表格
+每个表格由`table`标签开始<br />
+每个表格行由`tr`标签开始<br />
+每个表格数据由`td`标签开始
+
+一列：
+<table border="1">
+<tr>
+  <td>100</td>
+</tr>
+</table>
+
+```
+<table border="1">
+<tr>
+  <td>100></td>
+</tr>
+</table>
+```
+
+
+一行三列：
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+</table>
+
+```
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+</table>
+```
+
+
+
+两行三列：
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+```
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+```
+表格由`table`标签定义，每个表格均有若干行（由`tr`标签定义），每行被分割为若干单元格（由`td`标签定义）字母td指表格数据(table data)，即数据单元格的内容，数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等。
+
+
+`th`标签定义表头，大多数浏览器会把表头定义为粗体居中的文本
+<table border="1">
+<tr>
+  <th>Heading</th>
+  <th>Another Heading</th>
+</tr>
+<tr>
+  <td>row 1 cell 1</td>
+  <td>row 1 cell 2</td>
+</tr>
+<tr>
+  <td>row 2 cell 1</td>
+  <td>row 2 cell 2</td>
+</tr>
+</table>
+
+```
+<table border="1">
+<tr>
+  <th>Heading</th>
+  <th>Another Heading</th>
+</tr>
+<tr>
+  <td>row 1 cell 1</td>
+  <td>row 1 cell 2</td>
+</tr>
+<tr>
+  <td>row 2 cell 1</td>
+  <td>row 2 cell 2</td>
+</tr>
+</table>
+```
+
+**表格中的空单元格**<br/>
+一些浏览器可能无法显示出空单元格的边框<br/>
+解决办法：在空单元格中t添加一个空格占位符
+```
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>400</td>
+</tr>
+</table>
+```
+no-breaking空格：`&nbsp;`
+
+表格标题：
+<table border="1">
+<caption>我的标题</caption>
+<tr>
+  <td>100</td>
+  <td>200</td>
+</tr>
+<tr>
+  <td>300</td>
+  <td>400</td>
+</tr>
+</table>
+
+```
+<table border="1">
+<caption>我的标题</caption>
+<tr>
+  <td>100</td>
+  <td>200</td>
+</tr>
+<tr>
+  <td>300</td>
+  <td>400</td>
+</tr>
+</table>
+```
+
+**跨行或跨列的表格单元格**
