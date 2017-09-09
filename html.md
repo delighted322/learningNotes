@@ -350,3 +350,227 @@ no-breaking空格：`&nbsp;`
 ```
 
 **跨行或跨列的表格单元格**
+<table border="1">
+<tr>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td rowspan="2">47</td>
+  <td colspan="2">56</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>9</td>
+</tr>
+<table>
+
+```
+<table border="1">
+<tr>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td rowspan="2">47</td>
+  <td colspan="2">56</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>9</td>
+</tr>
+<table>
+```
+
+`rowspan="2"`横跨两行<br/>
+`colspan="2"`横跨两列
+
+**单元格边距**
+<table border="1" cellpadding="10">
+<tr>
+  <td>1</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>4</td>
+</tr>
+<table>
+
+`cellpadding`创建单元格内容与边框之间的空白
+
+**单元格间距**
+
+`cellspacing`增加单元格之间的距离
+
+**向表格添加背景颜色或背景图像**
+
+背景颜色：
+```
+<table border="1" bgcolor="red">
+<tr>
+  <td>1</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>4</td>
+</tr>
+<table>
+```
+
+背景图像：
+```
+<table border="1" background="....jpg">
+<tr>
+  <td>1</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>4</td>
+</tr>
+<table>
+```
+
+**在表格单元中排列内容**
+```
+<table border="1">
+<tr>
+  <td align="left">1</td>
+  <td align="right">2</td>
+</tr>
+<tr>
+  <td align="left">3</td>
+  <td align="right">4</td>
+</tr>
+<table>
+```
+
+**使用frame属性控制围绕表格的边框**
+
+`frame="box"`:
+<table frame="box">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+`frame="above"`:
+<table frame="above">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+`frame="below"`
+<table frame="below">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+`frame="hsides"`上下
+<table frame="hsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+`frame="vsides"`左右
+<table frame="vsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+### 11.HTML列表
+**无序列表**
+<ul type="disc">
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ul>
+
+```
+<ul type="disc">
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ul>
+```
+type的值有disc，circle，square
+
+**有序列表**
+<ol start="50">
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ol>
+
+```
+<ol start="50">
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ol>
+```
+type的值有A(字母列表),a(小写字母列表),I(罗马字母列表),i(小写罗马字母列表)
+
+**定义列表**
+<dl>
+   <dt>计算机</dt>
+   <dd>用来计算的仪器 ... ...</dd>
+   <dt>显示器</dt>
+   <dd>以视觉方式显示信息的装置 ... ...</dd>
+</dl>
+
+```
+<dl>
+   <dt>计算机</dt>
+   <dd>用来计算的仪器 ... ...</dd>
+   <dt>显示器</dt>
+   <dd>以视觉方式显示信息的装置 ... ...</dd>
+</dl>
+```
+自定义列表不仅仅是一列项目，而是项目及其注释的组合<br/>
+自定义列表以`<dl>`标签开始，每个自定义列表项以`<dt>`开始，每个自定义列表项的定义以`<dd>`开始
+
+### 12.HTML块
+
+- **块级元素**(block level element)<br/>
+  块级元素在浏览器显示时，通常会以新行来开始和结束
+- **内联元素**(inline element)<br/>
+  前后不换行
+- **`div`元素**(块级元素，是可用于组合其他HTML元素的容器)<br/>
+  和CSS一起使用，可用于对大的内容块设置样式属性；<br/>
+  可用于文档布局
+- **`span`元素**(内联元素，可用作文本的容器)<br/>
+  当与CSS一起使用时，可用于为部分文本设置样式属性
