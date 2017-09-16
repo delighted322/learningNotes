@@ -574,3 +574,97 @@ type的值有A(字母列表),a(小写字母列表),I(罗马字母列表),i(小�
   可用于文档布局
 - **`span`元素**(内联元素，可用作文本的容器)<br/>
   当与CSS一起使用时，可用于为部分文本设置样式属性
+
+***
+### 13.HTML类
+对HTML进行分类（设置类），使我们能够为元素的类定义CSS样式。<br/>
+为相同的类设置相同的样式，为不同的类设置不同的样式
+- 分类块级元素
+- 分类行内元素
+
+### 14.HTML布局
+- **使用`<div>`元素的HTML布局**
+- **使用HTML5的网站布局**<br/>
+*HTML5语义元素：*<br/>
+  + header : 定义文档或节的页眉
+  + nav ： 定义导航链接的容器
+  + section ： 定义文档中的节
+  + article ： 定义独立的自包含文章
+  + aside ： 定义内容之外的内容（比如侧边栏）
+  + footer ： 定义文档或节的页脚
+  + details ： 定义额外的细节
+  + summary ： 定义details元素的标题
+- **使用表格的HTML布局**<br/>
+  + `<table>`元素的作用是显示表格化的数据，并不是作为布局工具而设计的
+  + 使用`<table>`元素能取得布局效果是因为能通过CSS设置表格元素的样式
+
+### 15.HTML响应式Web设计
+RWD：响应式Web设计(Responsive Web Design)<br/>
+创建响应式设计：
+- 可以创建自己的响应式设计
+- 或使用现成的CSS框架 — Bootstrap
+
+`<meta name="viewport" content="width=device-width, initial-scale=1">`
+
+### 16.HTML框架
+通过使用框架可以在同一个浏览器窗口中显示不止一个页面<br/>
+每份HTML文档称为一个框架，每个框架都独立于其他的框架<br/>
+**框架结构标签（`<frameset>`）**
+- 框架结构标签定义如何将窗口分割为框架
+- 每个frameset定义了一系列行或列
+- rows(行)/columns(列)的值规定了每行或每列占据屏幕的面积
+
+**框架标签（`frame`）**<br/>
+`<frame>`标签定义了放置在每个框架中的HTML文档
+```
+<frameset cols="25%,75%">
+  <frame src="frame_a.html">
+  <frame src="frame_b.html">
+</frameset>
+```
+
+**`<noframes>`标签**<br/>
+为不支持框架的浏览器添加`<noframes>`标签
+
+ps：
+- 不能将`<body></body>`标签与`<frameset></frameset>`标签同时使用
+- 如果添加包含一段文本的`<noframes>`标签，就必须将这段文字嵌套在`<body></body>`标签内
+  ```
+  <html>
+    <frameset cols="25%,50%,25%">
+      <frame src="/example/html/frame_a.html">
+      <frame src="/example/html/frame_b.html">
+      <frame src="/example/html/frame_c.html">
+    <noframes>
+      <body>您的浏览器无法处理框架！</body>
+    </noframes>
+    </frameset>
+  </html>
+  ```
+
+**混合框架结构**
+```
+<html>
+<frameset rows="50%,50%">
+  <frame src="/example/html/frame_a.html">
+  <frameset cols="25%,75%">
+    <frame src="/example/html/frame_b.html">
+    <frame src="/example/html/frame_c.html">
+  </frameset>
+</frameset>
+</html>
+```
+
+**noresizes属性**<br/>
+假如框架有可见边框，用户可以通过拖动边框来改变它的大小。为了避免这种情况，可以在`<frame>`标签中加入`noresize="noresize"`
+```
+<html>
+<frameset cols="50%,*,25%">
+  <frame src="/example/html/frame_a.html" noresize="noresize" />
+  <frame src="/example/html/frame_b.html" />
+  <frame src="/example/html/frame_c.html" />
+</frameset>
+</html>
+```
+
+**导航框架**
