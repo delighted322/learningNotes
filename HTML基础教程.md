@@ -666,3 +666,55 @@ ps：
 </frameset>
 </html>
 ```
+**导航框架**<br/>
+导航框架包含一个将第二个框架作为目标的链接列表
+
+**内联框架**（HTML页中的框架）<br/>
+<html>
+  <body>
+    <iframe src="....jpg"></iframe>
+    <p>一些老的浏览器不支持 iframe。</p>
+    <p>如果得不到支持，iframe 是不可见的。</p>
+  </body>
+</html>
+
+```
+<html>
+  <body>
+    <iframe src="....jpg"></iframe>
+    <p>一些老的浏览器不支持 iframe。</p>
+    <p>如果得不到支持，iframe 是不可见的。</p>
+  </body>
+</html>
+```
+**跳转至框架内的一个指定的节**
+
+**使用框架导航跳转至指定的节**
+
+### 17.HTML内联框架<br/>
+ifrme用于在网页内显示网页<br/>
+`<iframe src="URL"></iframe>`url指向隔离页面的位置
+- **设置高度和宽度**<br/>
+  height和width属性值的默认单位是像素，但也可以用百分比来设定
+  ```
+  <iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+  ```
+- **删除边框**<br/>
+  frameborder属性规定是否显示iframe周围的边框，设置属性值为0就可以移除边框
+  ```
+  <iframe src="demo_iframe.htm" frameborder="0"></iframe>
+  ```
+- **使用iframe作为链接的目标**<br/>
+  iframe可用作链接的目标(target),链接的target属性必须引用iframe的name属性
+  ```
+  <iframe src="demo_iframe.html" name="iframe_a"</iframe>
+  <p>
+    <a herf="http://www.w3school.com.cn" target="iframe_a">w3School.com.cn</a>
+  </p>
+  ```
+  <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+  <p>
+    <a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a>
+  </p>
+
+  ### 18.HTML背景
