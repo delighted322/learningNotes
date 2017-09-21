@@ -1,4 +1,4 @@
-- snow要加引号是英文snow在这里是字符串，如果不加引号，则是没有被定义的变量
+- snow要加引号是因为snow在这里是字符串，如果不加引号，则是没有被定义的变量
   ```
   print "Its fleece was white as %s." % 'snow'
   ```
